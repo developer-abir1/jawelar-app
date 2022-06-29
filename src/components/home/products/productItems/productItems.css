@@ -1,0 +1,12 @@
+.addTOCard{
+    border: none;
+    color: white;
+    background-color:#917c0aea;
+    padding: 5px;
+}
+.addTOCard:hover{
+   
+    background-color:#7a6903ea;
+    
+     
+}

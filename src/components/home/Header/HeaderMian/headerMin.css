@@ -1,0 +1,24 @@
+ .carouselItem{
+    background-image: url(../../../../images/image/happy-clients.png);
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+ }
+ .carouselItem1{
+    background-image: url(../../../../images/image/woman-happy.png);
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+ }
+ .carouselItem2{
+    background-image: url(../../../../images/image/groom-holds-bride-s-hands-where-are-two-wedding-rings_8353-10454.png);
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+ }
