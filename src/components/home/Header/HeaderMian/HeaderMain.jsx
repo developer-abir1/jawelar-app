@@ -13,13 +13,13 @@ const HeaderMain = () => {
 
 
                             <div className="px-4 ">
-                                <h4 className="fs-4 text-center text-muted text-uppercase">Most Popular Collection</h4>
-                                <p className=" text-muted text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi soluta, consequatur </p>
+                                <h4 className="fs-4 text-center text-muted text-uppercase"> Family Jewelery Collection</h4>
+                                <p className="  text-secondary text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
                             </div>
 
-                            <div className="d-flex  justify-content-between align-items-center">
-                                <button className='btn btn-primary'>Get Booking</button>
-                                <button className=' btn btn-outline-warning  ms-4 '>Buy Now</button>
+                            <div className="d-flex  justify-content-between ">
+
+                                <button className=' btn btn-outline-warning    '>Shop Now</button>
                             </div>
 
                         </div>
@@ -29,10 +29,11 @@ const HeaderMain = () => {
                 <div class="carousel-item carouselItem1 ">
                     <div className="row" >
                         <div className="col-md-6  d-flex justify-content-center align-items-center flex-column  " style={{ height: "500px" }} >
-                            <h2 className="text-uppercase text-muted">Our Bast collection</h2>
+                            <h2 className="text-uppercase text-muted">Daimonds Jewelery collection</h2>
+                            <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, velit!</p>
                             <div className="d-flex  justify-content-between align-items-center">
-                                <button className='btn btn-primary'>  Booking</button>
-                                <button className=' btn btn-outline-success  ms-4 '>Buy Now</button>
+
+                                <button className=' btn  btn-outline-warning    text-uppercase'>Shop Now</button>
                             </div>
 
                         </div>
@@ -41,16 +42,32 @@ const HeaderMain = () => {
                 </div>
                 <div class="carousel-item carouselItem2">
                     <div className="d-flex justify-content-center align-items-center flex-column" style={{ height: "500px" }}>
-                        <h2 className="text-uppercase text-white">Wadding our most common effect</h2>
+                        <h2 className="text-uppercase text-white">Grace Desinger Jewelery</h2>
+                        <p className="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                         <div>
-                            <button className="btn btn-close-white">Book Now</button>
+                            <button className="btn  btn-outline-warning   text-uppercase">Shop Now</button>
 
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
+
+
+            <button class="carousel-control-prev   bg-black  " style={{ height: "60px ", width: "60px", marginTop: "220px" }} type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+
+
+            <button class="carousel-control-next    bg-black " style={{ height: "60px ", width: "60px", marginTop: "220px" }} type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+
+        </div >
     );
 };
 

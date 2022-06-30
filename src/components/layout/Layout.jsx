@@ -11,7 +11,7 @@ const Layout = ({ title, children }) => {
 
                     <Navbar />
                 </header>
-                <main className="container mx-auto mt-4 px-4">
+                <main className=" ">
                     {children}
                 </main>
                 <footer className="d-flex h-10 justify-content-center items-content-center shadow-inner">

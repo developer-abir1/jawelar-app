@@ -4,14 +4,17 @@ import ProductItems from '../productItems/ProductItems';
 
 const Products = () => {
     return (
-        <section>
+        <section className="container">
             <div className="px-4 py-4">
                 <h2 className="     border-end border-info border-2 " style={{ width: '200px' }} > Hot Product:</h2>
             </div>
             <div className="row g-4  row-cols-1 row-cols-sm-2   row-cols-md-3  row-cols-lg-4">
                 {
-                    data.products.map(pd => <ProductItems key={pd.id} pd={pd} />)
+                    data.products.slice(0, 8).map(pd => <ProductItems key={pd.id} pd={pd} />)
                 }
+            </div>
+            <div className="d-flex justify-content-center">
+                <button className="btn btn-primary my-3 py-3">Show All Products</button>
             </div>
         </section>
     );

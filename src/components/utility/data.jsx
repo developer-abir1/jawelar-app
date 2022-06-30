@@ -45,6 +45,78 @@ const data = {
             image: "products/daimon.png"
 
         },
+        {
+            id: 8578,
+            name: "Daimons 20C 457M",
+            price: 650,
+            discription: "Thats items is very curiess proucts ",
+            madeIn: "Etly",
+            image: "products/daimon.png"
+
+        },
+        {
+            id: 8578,
+            name: "Daimons 20C 457M",
+            price: 650,
+            discription: "Thats items is very curiess proucts ",
+            madeIn: "Etly",
+            image: "products/daimon.png"
+
+        },
+        {
+            id: 8578,
+            name: "Daimons 20C 457M",
+            price: 650,
+            discription: "Thats items is very curiess proucts ",
+            madeIn: "Etly",
+            image: "products/daimon.png"
+
+        },
+        {
+            id: 8578,
+            name: "Daimons 20C 457M",
+            price: 650,
+            discription: "Thats items is very curiess proucts ",
+            madeIn: "Etly",
+            image: "products/daimon.png"
+
+        },
+        {
+            id: 8578,
+            name: "Daimons 20C 457M",
+            price: 650,
+            discription: "Thats items is very curiess proucts ",
+            madeIn: "Etly",
+            image: "products/daimon.png"
+
+        },
+        {
+            id: 8578,
+            name: "Daimons 20C 457M",
+            price: 650,
+            discription: "Thats items is very curiess proucts ",
+            madeIn: "Etly",
+            image: "products/daimon.png"
+
+        },
+        {
+            id: 8578,
+            name: "Daimons 20C 457M",
+            price: 650,
+            discription: "Thats items is very curiess proucts ",
+            madeIn: "Etly",
+            image: "products/daimon.png"
+
+        },
+        {
+            id: 8578,
+            name: "Daimons 20C 457M",
+            price: 650,
+            discription: "Thats items is very curiess proucts ",
+            madeIn: "Etly",
+            image: "products/daimon.png"
+
+        },
     ]
 }
 

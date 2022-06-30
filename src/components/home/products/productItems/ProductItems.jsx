@@ -1,21 +1,26 @@
 import React from 'react';
-import './productItems.css'
+import './productItems.css';
+import { Link } from 'react-router-dom'
 const ProductItems = ({ pd }) => {
     console.log(pd)
-    const { name, image, price } = pd
+    const { name, image, price, id } = pd;
+
     return (
-        <div className='cols'>
-            <div class="card">
-                <img style={{ height: "300px" }} src={image} class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title fs-4  text-info text-capitalize text-center">{name}</h5>
-                    <p class="card-text text-muted text-justify text-center">This is a longer card with supporting text below as a natural lead-in to additional content </p>
-                    <div className=" d-flex justify-content-between">
-                        <span className="fs-3 fw-bold">
-                            ${price}
-                        </span>
-                        <button className="addTOCard">Add To Card</button>
+        <div className='col'>
+            <div className="card p-2">
+                <Link to={`/product+details/${id}`} style={{ textDecoration: "none" }}>
+                    <img style={{ height: "300px" }} src={image} className="card-img-top zoomItem" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title fs-4  text-info text-capitalize text-center">{name}</h5>
+                        <p className="card-text text-muted text-justify text-center">This is a longer card with supporting text below as a natural lead-in to additional content </p>
                     </div>
+                </Link>
+                <div className=" d-flex justify-content-between cardPrice">
+                    <span className="fs-3 fw-bold cardPrice">
+                        ${price}
+                    </span>
+                    <button className="addTOCard  ">Add To Card</button>
+
                 </div>
             </div>
         </div>
