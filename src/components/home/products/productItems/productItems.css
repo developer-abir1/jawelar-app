@@ -1,13 +1,19 @@
 .addTOCard{
     border: none;
     color: white;
-    background-color:#917c0aea;
+    background-color:#c2a500ea;
     padding: 10px;
     border-radius:5px;
 }
 .addTOCard:hover{
    
-    background-color:#7a6903ea;
+    background-color:#9c8604ea;
+    
+     
+}
+.addTOCard:focus{
+   
+    border:1px solid  #eb9a03ea;
     
      
 }
