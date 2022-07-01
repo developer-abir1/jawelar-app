@@ -1,10 +1,9 @@
 import React from 'react';
 import './productItems.css';
 import { Link } from 'react-router-dom'
-const ProductItems = ({ pd, handleAddToCard }) => {
+const ProductItems = ({ pd }) => {
 
     const { name, image, price, _id } = pd;
-
 
     return (
         <div className='col'>
@@ -20,7 +19,7 @@ const ProductItems = ({ pd, handleAddToCard }) => {
                     <span className="fs-3 fw-bold cardPrice">
                         ${price}
                     </span>
-                    <button className="addTOCard  " onClick={() => handleAddToCard(pd)}>Add To Card</button>
+                    <button className="addTOCard  "  >Add To Card</button>
 
                 </div>
             </div>
