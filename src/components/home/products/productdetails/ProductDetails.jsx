@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { addToCard, deleteItem, getStoreCart } from '../../../utility/localStorege';
+import { useNavigate, useParams } from 'react-router-dom';
+import { addToCard, getStoreCart } from '../../../utility/localStorege';
 import useProduct from '../../../utility/useProduct';
 import Layout from './../../../layout/Layout';
 
 const ProductDetails = () => {
-    const [products, setProducts] = useProduct();
+    const [products,] = useProduct();
     const [cart, setCart] = useState([])
     const { prodId } = useParams()
-
+    let navigate = useNavigate();
 
     useEffect(() => {
 
@@ -18,13 +18,13 @@ const ProductDetails = () => {
             const storedCart = []
             for (const key in saveCart)
             {
-                console.log("key", saveCart[key])
+
                 const addedProduct = products.find(pd => pd._id === key)
                 if (addedProduct)
                 {
                     const quantity = saveCart[key]
                     addedProduct.quantity = quantity
-                    console.log("quantity", quantity)
+
                 }
                 storedCart.push(addedProduct)
 
@@ -43,17 +43,47 @@ const ProductDetails = () => {
     // console.log("get the product", data.products.map(pd => console.log(pd)))
 
     const handleAddToCard = (pd) => {
+        console.log("I denti f", pd)
+        let newCart = [];
+        const exists = cart.find(product => product._id === pd._id);
+        if (!exists)
+        {
+            pd.quantity = 1;
+            newCart = [...cart, pd];
+        }
+        else
+        {
+            const rest = cart.filter(product => product._id !== pd._id);
+            exists.quantity = exists.quantity + 1;
+            newCart = [...rest, exists];
+        }
 
-        const newCard = [...cart, pd]
-        setCart(newCard)
+
+        setCart(newCart)
         addToCard(pd._id)
+
     }
     // price    
     let total = 0;
+    let totalQuantity = 0;
     for (const prod of cart)
     {
-        total = total + prod.price
 
+
+        if (!prod.quantity)
+        {
+            prod.quantity = 1
+        }
+
+        total += prod.price * prod.quantity
+
+        totalQuantity = totalQuantity + prod.quantity
+
+
+    }
+
+    const handleClick = () => {
+        navigate("/prosscesOrder")
     }
 
     return (
@@ -75,8 +105,13 @@ const ProductDetails = () => {
                 <div className="col-md-3 mt-4">
                     <div className="card py-4 p-2 ">
 
-                        <div className="d-flex justify-content-between mb-4"> <span>Subtotal ( {cart.length} Items):</span>  <span>${total}</span></div>
-                        <Link to="/prosscesOrder">   <button className='btn btn-warning  w-full ' > Check out   </button> </Link>
+                        <div className="d-flex justify-content-between mb-4"> <span>Subtotal ( {totalQuantity} Items):</span>  <span>${total}</span></div>
+
+
+
+                        <button className='btn btn-warning  ' onClick={handleClick} > Check out   </button>
+
+
 
                     </div>
                 </div>
