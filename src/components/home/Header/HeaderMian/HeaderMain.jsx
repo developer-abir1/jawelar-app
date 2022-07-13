@@ -9,7 +9,7 @@ const HeaderMain = () => {
             <div className="carousel-inner">
                 <div className="carousel-item active carouselItem"  >
                     <div className="row d-flex justify-content-center align-items-center">
-                        <div className="col-md-6  d-flex justify-content-center align-items-center flex-column  " style={{ height: "500px" }}>
+                        <div className="col-md-6  d-flex justify-content-center align-items-center flex-column  " style={{ height: "700px" }}>
 
 
                             <div className="px-4 ">
@@ -28,7 +28,7 @@ const HeaderMain = () => {
                 </div>
                 <div className="carousel-item carouselItem1 ">
                     <div className="row" >
-                        <div className="col-md-6  d-flex justify-content-center align-items-center flex-column  " style={{ height: "500px" }} >
+                        <div className="col-md-6  d-flex justify-content-center align-items-center flex-column  " style={{ height: "700px" }} >
                             <h2 className="text-uppercase text-muted">Daimonds Jewelery collection</h2>
                             <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, velit!</p>
                             <div className="d-flex  justify-content-between align-items-center">
@@ -41,7 +41,7 @@ const HeaderMain = () => {
                     </div>
                 </div>
                 <div className="carousel-item carouselItem2">
-                    <div className="d-flex justify-content-center align-items-center flex-column" style={{ height: "500px" }}>
+                    <div className="d-flex justify-content-center align-items-center flex-column" style={{ height: "700px" }}>
                         <h2 className="text-uppercase text-white">Grace Desinger Jewelery</h2>
                         <p className="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                         <div>

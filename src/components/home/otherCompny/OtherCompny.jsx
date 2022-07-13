@@ -6,7 +6,7 @@ import 'swiper/css';
 
 const OtherCompny = () => {
     return (
-        <div classNameName="container">
+        <section classNameName="container mt-5">
 
             <Swiper
                 spaceBetween={50}
@@ -96,7 +96,7 @@ const OtherCompny = () => {
 
 
             </Swiper>
-        </div >
+        </section >
     );
 };
 

@@ -54,7 +54,9 @@ const ProcessOrder = () => {
     }
     return (
         <Layout>
-            {cart.length === 0 ? <h4 className="text-center  text-muted">Product is not Buy please shopping</h4> :
+            {cart.length === 0 ? <h4 className="text-center  text-muted">Shopping Cart
+                Cart is empty. Go shopping</h4>
+                :
                 <div className="row ">
                     <div className="col-md-8">
                         <table class="table">

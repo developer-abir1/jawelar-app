@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import ReactStars from 'react-stars';
+import Rating from 'react-rating';
 
 
 const Review = () => {
@@ -26,11 +26,14 @@ const Review = () => {
                             <h6 className="card-title font-monospace">Nokia , Software Development</h6>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                            <ReactStars
-                                count={5}
-                                value={5}
-                                size={24}
-                                color2={'#ffd700'} />
+                            <Rating
+
+                                emptySymbol="fa fa-star-o fa-2x"
+                                fullSymbol="fa fa-star fa-2x"
+                                emptySymbol="fa fa-star-o fa-2x"
+
+                                readonly
+                            />
                         </div>
 
 
@@ -47,11 +50,14 @@ const Review = () => {
                             <h6 className="card-title font-monospace">Nokia , Software Development</h6>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                            <ReactStars
-                                count={5}
-                                value={5}
-                                size={24}
-                                color2={'#ffd700'} />
+                            <Rating
+
+                                emptySymbol="fa fa-star-o fa-2x"
+                                fullSymbol="fa fa-star fa-2x"
+                                emptySymbol="fa fa-star-o fa-2x"
+
+                                readonly
+                            />
                         </div>
 
 
@@ -67,12 +73,15 @@ const Review = () => {
                             <h5 className="card-title">Jarin Afroxe</h5>
                             <h6 className="card-title font-monospace">Nokia , Software Development</h6>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <ReactStars
-                                count={5}
-                                value={4}
-                                size={24}
-                                color2={'#ffd700'} />
+                            <Rating
 
+                                emptySymbol="fa fa-star-o fa-2x"
+                                fullSymbol="fa fa-star fa-2x"
+                                emptySymbol="fa fa-star-o fa-2x"
+
+                                readonly
+
+                            />
                         </div>
 
 
@@ -89,11 +98,14 @@ const Review = () => {
                             <h6 className="card-title font-monospace">Nokia , Software Development</h6>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                            <ReactStars
-                                count={5}
-                                value={5}
-                                size={24}
-                                color2={'#ffd700'} />
+                            <Rating
+
+                                fullSymbol="fa fa-star fa-2x"
+                                emptySymbol="fa fa-star-o fa-2x"
+                                initialRating={4}
+                                style={{ color: 'green' }}
+                                readonly
+                            />
                         </div>
 
 

@@ -3,9 +3,39 @@ import { Link } from 'react-router-dom';
 import logo from "../../images/icon/logo.png"
 import { getStoreCart } from '../utility/localStorege';
 import useProduct from '../utility/useProduct';
+import { GoogleAuthProvider, signInWithPopup, getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 
 const Navbar = () => {
+  const [users, setUsers] = useState({})
+  const auth = getAuth()
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setUsers(user)
+      if (user)
+      {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        const uid = user.uid;
+        console.log(uid);
+        // ...
+      } else
+      {
+        // User is signed out
+        // ...
+      }
+    });
+
+  })
+
+  const handleLogout = () => {
+    signOut(auth).then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      // An error happened.
+    });
+  }
+
   const [products,] = useProduct();
 
   const [cart, setCart] = useState([])
@@ -74,10 +104,13 @@ const Navbar = () => {
           <div className="navbar-nav ms-auto ">
             <Link to="/" className=" text-decoration-none">  <span className="nav-link active text-white"  >Home</span> </Link>
             <span className="nav-link text-white"  >Features</span>
+            {users && <span className="nav-link text-white"  >{users.displayName}</span>}
 
 
-            <Link to="/prosscesOrder" className=" text-decoration-none">   <span className="nav-link text-white">  <span>Cart</span> <span className=" rounded-circle p-1   bg-danger">{totalQuantity}</span> </span></Link>
-            <span className="nav-link text-white"  >Login</span>
+            {cart.length > 0 && <Link to="/prosscesOrder" className=" text-decoration-none">   <span className="nav-link text-white">  <span>Cart</span> <span className=" rounded-circle p-1   bg-danger">{totalQuantity}</span> </span></Link>}
+
+            {users && users.email ? <span className="nav-link text-white" onClick={handleLogout} >Logout</span>
+              : <Link to="/login"> <span className="nav-link text-white"  >login</span></Link>}
           </div>
         </div>
       </div>

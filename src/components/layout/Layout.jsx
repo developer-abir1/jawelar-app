@@ -2,14 +2,15 @@ import React from 'react';
 import Footer from '../share/Footer';
 import Navbar from '../share/Navbar';
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title, children, users }) => {
+
     { document.title = title ? title + "Jawelar" : "Jawelar App" }
     return (
         <>
             <div className=" d-flex justify-content-between flex-column  min-vh-100">
                 <header>
 
-                    <Navbar />
+                    <Navbar users={users} />
                 </header>
                 <main className=" ">
                     {children}

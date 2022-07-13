@@ -17,7 +17,7 @@ const Home = () => {
 
             <Products />
             <Discount />
-            <OtherCompny />
+
             <Review />
 
         </Layout>
